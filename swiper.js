@@ -1,12 +1,12 @@
 const mq = window.matchMedia('(min-width: 576px)');
 
 function isMobileDevice() {
-  const userAgent = navigator.userAgent.toLowerCase();
-  return /iphone|ipod|ipad|android|windows phone|blackberry|mobile|webos|opera mini|kindle/.test(userAgent);
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /iphone|ipod|ipad|android|windows phone|blackberry|mobile|webos|opera mini|kindle/.test(userAgent);
 }
 
 // Initialize Swiper
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".magazineSwiper", {
     slidesPerView: 1,
     autoHeight: true,
     allowTouchMove: true,
@@ -30,20 +30,20 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 swiper.on('zoomChange', (swiper, scale) => {
-  if (isMobileDevice()) {
-    const zoomed = scale > 1;
-    swiperFullscreen(zoomed)
-    if(zoomed){
-        swiper.allowTouchMove = false;
-        swiper.keyboard.disable()
-        swiper.mousewheel.disable()
+    if (isMobileDevice()) {
+        const zoomed = scale > 1;
+        swiperFullscreen(zoomed)
+        if(zoomed){
+            swiper.allowTouchMove = false;
+            swiper.keyboard.disable()
+            swiper.mousewheel.disable()
+        }
+        else{
+            swiper.allowTouchMove = true;
+            swiper.keyboard.enable()
+            swiper.mousewheel.enable()
+        }
     }
-    else{
-        swiper.allowTouchMove = true;
-        swiper.keyboard.enable()
-        swiper.mousewheel.enable()
-    }
-  }
 });
 
 function swiperFullscreen(fullscreen){

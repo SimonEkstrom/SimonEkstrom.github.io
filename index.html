@@ -17,36 +17,31 @@
       <header id="navbar"></header>
       <main class="py-5">
         <section>
-          <h1>Senaste nummer</h1>
           <!-- Magazine card -->
           <div class="mx-auto d-flex justify-content-center">
             <div>
-              <p><b>Återfödelse<br/><small>31 januari 2026</small></b></p>
-              <div class="tilt-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <p><small><b>Senaste nummer:</b><br/>april 2026</small></p>
+              <div class="tilt-card" data-bs-toggle="modal" data-bs-target="#magazineModal">
                 <img src="https://i.pinimg.com/1200x/78/e6/73/78e6734971b9794d58dcb981705fc2cc.jpg">
               </div>
             </div>
           </div>
         </section>
         <section>
-          <h1>Tidigare nummer</h1>
-          
-        </section>
-        <section>
           <h1>Redaktörer</h1>
         </section>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background: rgba(0,0,0,0.6);">
+        <div class="modal fade" id="magazineModal" tabindex="-1" aria-labelledby="magazineModalLabel" aria-hidden="true" style="background: rgba(0,0,0,0.6);">
           <div class="modal-dialog modal-lg modal-dialog-centered mx-auto modal-fullscreen-lg-down">
             <div class="modal-content border-0" style="background: none;">
               <div class="modal-header border-0" data-bs-theme="dark">
-                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #fff;"><small>31 januari 2026 -</small> Återfödelse</h1>
+                <h1 class="modal-title fs-5" id="magazineModalLabel" style="color: #fff;"><small>31 januari 2026 -</small> Återfödelse</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body d-flex align-items-center p-0">
                 <!-- Swiper -->
-                <div class="swiper mySwiper">
+                <div class="swiper magazineSwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="swiper-zoom-container">
@@ -69,7 +64,7 @@
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
-                <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="position-absolute w-100 h-100"></div>
+                <div data-bs-toggle="modal" data-bs-target="#magazineModal" class="position-absolute w-100 h-100"></div>
               </div>
             </div>
           </div>
