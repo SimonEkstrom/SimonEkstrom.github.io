@@ -49,15 +49,21 @@
                 <div class="swiper mySwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="https://i.pinimg.com/1200x/78/e6/73/78e6734971b9794d58dcb981705fc2cc.jpg" class="w-100 d-block" loading="lazy" />
+                      <div class="swiper-zoom-container">
+                          <img src="https://i.pinimg.com/1200x/78/e6/73/78e6734971b9794d58dcb981705fc2cc.jpg" class="w-100 d-block" loading="lazy" />
+                      </div>
                       <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://i.pinimg.com/736x/3a/b7/3c/3ab73c8f57af301bcc65852dfc2a59eb.jpg" class="w-100 d-block" loading="lazy" />
+                      <div class="swiper-zoom-container">
+                          <img src="https://i.pinimg.com/736x/3a/b7/3c/3ab73c8f57af301bcc65852dfc2a59eb.jpg" class="w-100 d-block" loading="lazy" />
+                      </div>
                       <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                     <div class="swiper-slide">
-                      <img src="https://i.pinimg.com/1200x/52/b2/2f/52b22fb7d32ae9649aa7fef423b4f582.jpg" class="w-100 d-block" loading="lazy" />
+                      <div class="swiper-zoom-container">
+                          <img src="https://i.pinimg.com/1200x/52/b2/2f/52b22fb7d32ae9649aa7fef423b4f582.jpg" class="w-100 d-block" loading="lazy" />
+                      </div>
                       <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                   </div>
@@ -97,6 +103,10 @@
         },
         keyboard: {
           enabled: true,
+        },
+        zoom: true,
+        zoom: {
+          maxRatio: 2,
         },
       });
     </script>
