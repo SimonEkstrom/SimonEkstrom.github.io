@@ -1,6 +1,7 @@
 .swiper-pagination-fraction {
     color: white !important;
     mix-blend-mode: difference;
+    bottom: 0px !important;
 }
 
 /* Card */
