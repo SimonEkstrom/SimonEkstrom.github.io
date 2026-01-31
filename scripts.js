@@ -32,6 +32,7 @@ var swiper = new Swiper(".mySwiper", {
 swiper.on('zoomChange', (swiper, scale) => {
   if (isMobileDevice()) {
     const zoomed = scale > 1;
+    swiperFullscreen(zoomed)
     if(zoomed){
         swiper.allowTouchMove = false;
         swiper.keyboard.disable()
@@ -45,49 +46,13 @@ swiper.on('zoomChange', (swiper, scale) => {
   }
 });
 
-
-
-/*
-const mq = window.matchMedia('(min-width: 576px)');
-
-function handleScreenChange(e) {
-  if (e.matches) {
-    // screen is ≥ 576px
-  } else {
-    // screen is < 576px
-    document.addEventListener('click', () => {
-        if (document.querySelector('.swiper-slide-zoomed')) {
-            document.querySelectorAll('.swiper').forEach(el => {
-                el.classList.add('swiper-fullscreen');});
-            document.querySelectorAll('.modal-body').forEach(el => {
-                el.classList.add('position-unset');});
-        } else {
-            document.querySelectorAll('.swiper').forEach(el => {
-                el.classList.remove('swiper-fullscreen');});
-            document.querySelectorAll('.modal-body').forEach(el => {
-                el.classList.remove('position-unset');});
-        }
-    });
-  }
-}
-
-// run once on load
-handleScreenChange(mq);
-
-// listen for changes
-mq.addEventListener('change', handleScreenChange);
-
-swiper.on('zoomChange', (swiper, scale) => {
-    if (e.matches) {
-        // screen is ≥ 576px
-    } else {
-        // screen is < 576px
-        const zoomed = scale > 1;
-
-        swiper.allowTouchMove = !zoomed;
-        swiper.mousewheel && (swiper.mousewheel.enabled = !zoomed);
-        swiper.keyboard && (swiper.keyboard.enabled = !zoomed);
+function swiperFullscreen(fullscreen){
+    if(fullscreen){
+        document.querySelectorAll('.modal').forEach(el => {
+            el.classList.add('modal-swiper-fullscreen');});
     }
-});
-
-*/
+    else{
+        document.querySelectorAll('.modal').forEach(el => {
+            el.classList.remove('modal-swiper-fullscreen');});
+    }
+}
