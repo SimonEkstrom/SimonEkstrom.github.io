@@ -13,23 +13,56 @@
     <div class="container py-3" style="max-width: 960px;">
       <header id="navbar"></header>
       <main class="py-5">
-        <!-- Magazine card -->
-        <div class="tilt-card mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg">
-        </div>
+        <section>
+          <h1>Senaste nummer</h1>
+          <!-- Magazine card -->
+          <div class="mx-auto d-flex justify-content-center">
+            <div>
+              <p><b>Återfödelse<br/><small>31 januari 2026</small></b></p>
+              <div class="tilt-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Tidigare nummer</h1>
+          
+        </section>
+        <section>
+          <h1>Redaktörer</h1>
+        </section>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered mx-auto modal-fullscreen-lg-down">
+          <div class="modal-dialog modal-lg modal-dialog-centered mx-auto modal-fullscreen-lg-down">
             <div class="modal-content border-0">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel"><small>31 januari 2026 -</small> Återfödelse</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-0">
-                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
-                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
-                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
