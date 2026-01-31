@@ -25,7 +25,7 @@ var swiper = new Swiper(".magazineSwiper", {
     },
     zoom: true,
     zoom: {
-        maxRatio: 1.75,
+        maxRatio: 1.5,
     },
 });
 
