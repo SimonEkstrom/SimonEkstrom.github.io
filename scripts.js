@@ -1,3 +1,10 @@
+const mq = window.matchMedia('(min-width: 576px)');
+
+function isMobileDevice() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return /iphone|ipod|ipad|android|windows phone|blackberry|mobile|webos|opera mini|kindle/.test(userAgent);
+}
+
 // Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -23,17 +30,18 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 swiper.on('zoomChange', (swiper, scale) => {
-    console.log(scale)
-  const zoomed = scale > 1;
-  if(zoomed){
-    swiper.allowTouchMove = false;
-    swiper.keyboard.disable()
-    swiper.mousewheel.disable()
-  }
-  else{
-    swiper.allowTouchMove = true;
-    swiper.keyboard.enable()
-    swiper.mousewheel.enable()
+  if (isMobileDevice()) {
+    const zoomed = scale > 1;
+    if(zoomed){
+        swiper.allowTouchMove = false;
+        swiper.keyboard.disable()
+        swiper.mousewheel.disable()
+    }
+    else{
+        swiper.allowTouchMove = true;
+        swiper.keyboard.enable()
+        swiper.mousewheel.enable()
+    }
   }
 });
 
