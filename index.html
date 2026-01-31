@@ -61,6 +61,7 @@
                       <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </div>
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
@@ -80,11 +81,17 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        autoHeight: true,
         slidesPerView: 1,
         spaceBetween: 30,
         grabCursor: true,
         lazy: true,
         mousewheel: true,
+        pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        },
         keyboard: {
           enabled: true,
         },
