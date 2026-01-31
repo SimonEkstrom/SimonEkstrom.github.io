@@ -1,0 +1,61 @@
+/* Scene perspective */
+body {
+  perspective: 1000px;
+}
+
+/* Card */
+.tilt-card {
+  width: 100%;
+  min-width: 320px;
+  max-width: 420px;
+  border-radius: 2px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  will-change: transform;
+}
+
+/* Image */
+.tilt-card img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Glow / reflection */
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255,255,255,0.35),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* Hover polish */
+.tilt-card:hover {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.tilt-card:hover .glow {
+  opacity: 1;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transition: none;
+    transform: none !important;
+  }
+  .glow {
+    display: none;
+  }
+}
