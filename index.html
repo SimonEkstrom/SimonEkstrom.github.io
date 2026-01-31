@@ -82,6 +82,11 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
+        direction: 'horizontal', // or 'vertical'
+        mousewheel: {
+          invert: false, // Set to true to invert direction
+          forceToAxis: true, // Recommended for trackpads
+        },
         autoHeight: true,
         slidesPerView: 1,
         grabCursor: true,
