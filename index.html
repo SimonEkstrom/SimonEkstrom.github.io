@@ -7,7 +7,10 @@
     <title>Sigill</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./sigill_favicon.png" type="image/x-icon">
+    <!-- Link Bootstrap's CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="container py-3" style="max-width: 960px;">
@@ -41,27 +44,15 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #fff;"><small>31 januari 2026 -</small> Återfödelse</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body d-flex align-items-center">
-                <div id="carouselExample" class="carousel slide w-100" style="box-shadow: 0 0 60px rgba(0,0,0,0.5);">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="...">
-                    </div>
+              <div class="modal-body d-flex align-items-center p-0">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="..."></div>
+                    <div class="swiper-slide"><img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="..."></div>
+                    <div class="swiper-slide"><img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="..."></div>
+                    <div class="swiper-slide"><img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" class="d-block w-100" alt="..."></div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -70,10 +61,24 @@
       </main>
       <footer id="footer"></footer>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+
     <script src="loadNavbar.js"></script>
     <script src="loadFooter.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
   </body>
 </html>
 
