@@ -4,6 +4,10 @@
     bottom: 0px !important;
 }
 
+.swiper-slide-zoomed img{
+    
+}
+
 /* Card */
 .tilt-card {
   width: 100%;
