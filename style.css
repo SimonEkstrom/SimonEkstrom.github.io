@@ -6,7 +6,6 @@ body {
 /* Card */
 .tilt-card {
   width: 100%;
-  min-width: 320px;
   max-width: 420px;
   border-radius: 2px;
   overflow: hidden;
