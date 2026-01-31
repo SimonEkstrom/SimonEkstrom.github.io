@@ -1,3 +1,45 @@
+// Initialize Swiper
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    autoHeight: true,
+    allowTouchMove: true,
+    lazy: true,
+    direction: 'horizontal', // or 'vertical'
+    mousewheel: {
+        invert: false, // Set to true to invert direction
+        forceToAxis: true, // Recommended for trackpads
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+    },
+    keyboard: {
+        enabled: true,
+    },
+    zoom: true,
+    zoom: {
+        maxRatio: 1.75,
+    },
+});
+
+swiper.on('zoomChange', (swiper, scale) => {
+    console.log(scale)
+  const zoomed = scale > 1;
+  if(zoomed){
+    swiper.allowTouchMove = false;
+    swiper.keyboard.disable()
+    swiper.mousewheel.disable()
+  }
+  else{
+    swiper.allowTouchMove = true;
+    swiper.keyboard.enable()
+    swiper.mousewheel.enable()
+  }
+});
+
+
+
+/*
 const mq = window.matchMedia('(min-width: 576px)');
 
 function handleScreenChange(e) {
@@ -7,13 +49,15 @@ function handleScreenChange(e) {
     // screen is < 576px
     document.addEventListener('click', () => {
         if (document.querySelector('.swiper-slide-zoomed')) {
-            console.log('Zoomed');
             document.querySelectorAll('.swiper').forEach(el => {
                 el.classList.add('swiper-fullscreen');});
+            document.querySelectorAll('.modal-body').forEach(el => {
+                el.classList.add('position-unset');});
         } else {
-            console.log('Not Zoomed');
             document.querySelectorAll('.swiper').forEach(el => {
                 el.classList.remove('swiper-fullscreen');});
+            document.querySelectorAll('.modal-body').forEach(el => {
+                el.classList.remove('position-unset');});
         }
     });
   }
@@ -38,3 +82,4 @@ swiper.on('zoomChange', (swiper, scale) => {
     }
 });
 
+*/
