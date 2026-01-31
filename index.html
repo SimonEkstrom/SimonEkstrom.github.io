@@ -13,8 +13,26 @@
     <div class="container py-3" style="max-width: 960px;">
       <header id="navbar"></header>
       <main class="py-5">
-        <div class="tilt-card mx-auto">
-          <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" alt="Fancy image">
+        <!-- Magazine card -->
+        <div class="tilt-card mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered mx-auto modal-fullscreen-lg-down">
+            <div class="modal-content border-0">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"><small>31 januari 2026 -</small> Återfödelse</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-0">
+                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
+                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
+                <img src="https://i.pinimg.com/736x/ee/21/7b/ee217b63917a494a5ff3451f80017271.jpg" width="100%">
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer id="footer"></footer>
