@@ -4,6 +4,14 @@
     bottom: 0px !important;
 }
 
+.swiper-fullscreen{
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
 /* Card */
 .tilt-card {
   width: 100%;
