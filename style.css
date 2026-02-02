@@ -32,6 +32,10 @@ body{
     height: 100% !important;
 }
 
+.modal-swiper-fullscreen img{
+    padding: 1rem;
+}
+
 .modal-swiper-fullscreen .swiper-pagination{
     visibility: hidden;
 }
